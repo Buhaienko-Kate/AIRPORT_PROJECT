@@ -1,6 +1,6 @@
 # Calendar_Project
 
-**[Site link](https://angry-hamilton-9b5f4c.netlify.app)**
+**[Site link](https://musing-curie-854b77.netlify.app)**
 
 The tech stack is:
 
