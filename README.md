@@ -1,4 +1,4 @@
-# Calendar_Project
+# AIRPORT_Project
 
 **[Site link](https://musing-curie-854b77.netlify.app)**
 
@@ -19,4 +19,4 @@ The tech stack is:
 
 - ##### Buhaienko-Kate
 
-# Calendar_Project
+# Airport_Project
