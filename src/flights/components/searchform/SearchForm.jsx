@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { Link, useParams } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { showFlightDirectionSelector } from '../../flights.selectors.js';
+
 import './searchForm.scss';
 
 const SearchForm = ({ direction }) => {
   const [searchInfo, setSearchInfo] = useState('');
 
-  const isDirection = direction ? direction : 'departures';
+  const isDirection = direction === 'departures' ? 'departures' : 'arrivals';
 
   const searchParam = searchInfo ? `?search=${searchInfo}` : '';
 
@@ -32,8 +35,14 @@ const SearchForm = ({ direction }) => {
   );
 };
 
+const mapState = state => {
+  return {
+    direction: showFlightDirectionSelector(state),
+  };
+};
+
 SearchForm.propTypes = {
   direction: PropTypes.string,
 };
 
-export default SearchForm;
+export default connect(mapState)(SearchForm);
